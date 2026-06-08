@@ -28,23 +28,23 @@
         </a>
         <div class="left-nav-submenu">
           <div class="submenu-item" onclick="App.showPlayOnline()">
-            <img src="https://www.chess.com/bundles/web/images/color-icons/time-blitz.svg" width="24" height="24">
+            <img src="assets/icons/time-blitz.svg" width="24" height="24">
             <span>Play Online</span>
           </div>
           <div class="submenu-item" onclick="App.showBotSetup()">
-            <img src="https://www.chess.com/bundles/web/images/color-icons/device-bot.svg" width="24" height="24">
+            <img src="assets/icons/device-bot.svg" width="24" height="24">
             <span>Play Bots</span>
           </div>
           <div class="submenu-item" onclick="App.enterStatsMode()">
-            <img src="https://www.chess.com/bundles/web/images/color-icons/leaderboard.svg" width="24" height="24">
+            <img src="assets/icons/leaderboard.svg" width="24" height="24">
             <span>Stats</span>
           </div>
           <div class="submenu-item" onclick="App.showVariants()">
-            <img src="https://www.chess.com/bundles/web/images/color-icons/variants.svg" width="24" height="24">
+            <img src="assets/icons/variants.svg" width="24" height="24">
             <span>Variants</span>
           </div>
           <div class="submenu-item" onclick="App.showGameHistory()">
-            <img src="https://www.chess.com/bundles/web/images/color-icons/board-archive.svg" width="24" height="24">
+            <img src="assets/icons/board-archive.svg" width="24" height="24">
             <span>Game History</span>
           </div>
         </div>
@@ -118,7 +118,7 @@
 
             <div class="play-menu-cards">
               <button class="play-menu-card" onclick="App.showPlayOnline()">
-                <img class="play-menu-icon" src="https://www.chess.com/bundles/web/images/color-icons/time-blitz.svg" alt="">
+                <img class="play-menu-icon" src="assets/icons/time-blitz.svg" alt="">
                 <div class="play-menu-text">
                   <span class="play-menu-title">Play Online</span>
                   <span class="play-menu-desc">Play vs a person of similar skill</span>
@@ -126,7 +126,7 @@
               </button>
 
               <button class="play-menu-card" onclick="App.showBotSetup()">
-                <img class="play-menu-icon" src="https://www.chess.com/bundles/web/images/color-icons/device-bot.svg" alt="">
+                <img class="play-menu-icon" src="assets/icons/device-bot.svg" alt="">
                 <div class="play-menu-text">
                   <span class="play-menu-title">Play Bots</span>
                   <span class="play-menu-desc">Challenge a bot from Easy to Master</span>
@@ -134,7 +134,7 @@
               </button>
 
               <button class="play-menu-card" onclick="App.showPlayFriend()">
-                <img class="play-menu-icon" src="https://www.chess.com/bundles/web/images/color-icons/hand-shake.svg" alt="">
+                <img class="play-menu-icon" src="assets/icons/hand-shake.svg" alt="">
                 <div class="play-menu-text">
                   <span class="play-menu-title">Play a Friend</span>
                   <span class="play-menu-desc">Invite a friend to a game of chess</span>
@@ -142,7 +142,7 @@
               </button>
 
               <button class="play-menu-card" onclick="App.showVariants()">
-                <img class="play-menu-icon" src="https://www.chess.com/bundles/web/images/color-icons/variants.svg" alt="">
+                <img class="play-menu-icon" src="assets/icons/variants.svg" alt="">
                 <div class="play-menu-text">
                   <span class="play-menu-title">Chess Variants</span>
                   <span class="play-menu-desc">Find fun new ways to play chess</span>
@@ -152,11 +152,11 @@
 
             <div class="play-menu-footer">
               <a class="play-menu-link" href="#" onclick="App.showGameHistory(); return false">
-                <img src="https://www.chess.com/bundles/web/images/color-icons/board-archive.svg" width="20" height="20" alt="">
+                <img src="assets/icons/board-archive.svg" width="20" height="20" alt="">
                 Game History
               </a>
               <a class="play-menu-link" href="#" onclick="App.enterStatsMode(); return false">
-                <img src="https://www.chess.com/bundles/web/images/color-icons/leaderboard.svg" width="20" height="20" alt="">
+                <img src="assets/icons/leaderboard.svg" width="20" height="20" alt="">
                 Leaderboard
               </a>
             </div>
@@ -550,7 +550,7 @@
   <!-- Game History page -->
   <div id="history-page" class="history-page" style="display:none">
     <div class="history-topbar">
-      <img src="https://www.chess.com/bundles/web/images/color-icons/board-archive.svg" width="32" height="32">
+      <img src="assets/icons/board-archive.svg" width="32" height="32">
       <h2>Game History (<span id="history-total">0</span>)</h2>
     </div>
     <div class="history-layout">
@@ -662,6 +662,58 @@
           </button>
         </div>
         <div id="puzzle-settings-body" class="psm-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Variants page -->
+  <div id="variants-page" class="variants-page" style="display:none">
+    <div class="vp-preview" id="vp-preview">
+      <div class="vp-board-area">
+        <div id="vp-pocket-top" class="vp-pocket" style="display:none"></div>
+        <div class="vp-spell-cards" id="vp-spell-top" style="display:none">
+          <div class="vp-spell-card">Spell <span>x2</span></div>
+          <div class="vp-spell-card">Spell <span>x5</span></div>
+        </div>
+        <div class="vp-board" id="vp-board"></div>
+        <div class="vp-spell-cards" id="vp-spell-bottom" style="display:none">
+          <div class="vp-spell-card">Spell <span>x2</span></div>
+          <div class="vp-spell-card">Spell <span>x5</span></div>
+        </div>
+        <div id="vp-pocket-bottom" class="vp-pocket" style="display:none"></div>
+      </div>
+    </div>
+    <div class="vp-panel">
+      <div class="vp-panel-header">
+        <img src="assets/icons/variants.svg" width="28" height="28">
+        <h2>4 Player & Variants</h2>
+      </div>
+      <div class="vp-nav">
+        <button class="vp-nav-btn active">Home</button>
+        <button class="vp-nav-btn">Lobby</button>
+        <button class="vp-nav-btn">Arenas</button>
+        <button class="vp-nav-btn">Watch</button>
+        <button class="vp-nav-btn">Leaders</button>
+        <button class="vp-nav-btn">Archive</button>
+        <button class="vp-nav-btn">Friends</button>
+      </div>
+      <div class="vp-search-wrap">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#8b8987" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" class="vp-search" placeholder="Search by title and game rules" oninput="Variants.filter(this.value)">
+      </div>
+      <div class="vp-categories">
+        <button class="vp-cat active" data-cat="most-popular" onclick="Variants.setCategory('most-popular')">Most Popular</button>
+        <button class="vp-cat" data-cat="featured" onclick="Variants.setCategory('featured')">Featured</button>
+        <button class="vp-cat" data-cat="more" onclick="Variants.setCategory('more')">More</button>
+      </div>
+      <div class="vp-list" id="vp-list"></div>
+      <div class="vp-footer">
+        <span class="vp-footer-user">ojjy</span>
+        <span class="vp-footer-sep">|</span>
+        <span class="vp-footer-link">Forum</span>
+        <span class="vp-footer-link">4PC</span>
+        <span class="vp-footer-stat">157 GAMES</span>
+        <span class="vp-footer-stat">1497 PLAYERS</span>
       </div>
     </div>
   </div>
@@ -950,6 +1002,7 @@
   <script src="js/notifications.js"></script>
   <script src="js/online.js"></script>
   <script src="js/puzzles.js"></script>
+  <script src="js/variants.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
